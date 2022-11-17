@@ -1,0 +1,100 @@
+
+// Buttons
+.btn{
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding:0 25px;
+    text-transform:uppercase;
+    font-size: 16px;
+    height: 55px;
+    text-decoration: none;
+    position: relative;
+    border: none;
+    font-weight: 600;
+    font-family: $primary-font;
+    @include transition(all 0.3s ease);
+    @include border-radius(5px);
+    @include tab-sm-max() { 
+        font-size: 14px;
+        height: 50px;
+        padding:0 20px;
+    }
+    &.btn-small{
+      height:35px;
+      font-size: 12px;
+      padding:0 20px;
+    }
+  }
+  .btn-primary{
+    background: var(--primary-color );
+    color: var(--white);
+    filter: saturate(1);
+    &:hover{
+      filter: saturate(2);
+      &::after,  &::before{
+        background: var(--light-peach );
+      }
+    }
+  }
+  .btn-secondary{
+    background: transparent;
+    color: var(--white);
+    border:solid 1px var(--white);
+    &:hover{
+      background:rgba(255,255,255,0.2);
+      color: var(--white );
+    }
+  }
+  .btn-territory{
+    background: transparent;
+    color: var(--white);
+    border:solid 2px var(--primary-color );
+    &:hover{
+      background:var(--primary-color );
+      color: var(--white );
+    }
+  }
+  .btn-submit{
+    height:66px;
+    background: #D1D1D1;
+    padding:0 35px;
+    &:hover{
+      background:var(--primary-color );
+      color: var(--white );
+    }
+  }
+  .link-btn{
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding:0 0 5px 0;
+    margin-bottom: 20px;
+    text-transform:uppercase;
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+    border: none;
+    font-weight: 600;
+    font-family: $primary-font;
+    color: var(--primary-color);
+    @include transition(all 0.3s ease);
+    &:after{
+      width: 0%;
+      height:1px;
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: var(--primary-color);
+      @include transition(all 0.3s ease);
+    }
+    &:hover{
+      &:after{
+        width: 100%;
+      }
+    }
+  }

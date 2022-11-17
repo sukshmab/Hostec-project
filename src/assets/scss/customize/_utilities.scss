@@ -1,0 +1,134 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body {
+  font-family: $primary-font;
+  background: var(--white);
+}
+
+input, button, input:focus, button:focus{
+  outline: none;
+}
+
+*, body {
+  margin: 0;
+  padding: 0;
+  @include box-sizing(border-box);
+}
+
+input, button, input:focus, button:focus{
+  outline: none;
+}
+
+
+// Margin
+
+.m-auto{
+  margin: 0 auto;
+}
+
+// Padding
+
+.pt-50{
+  padding-top: 50px;
+}
+
+// Layout
+
+.container {
+  padding: 0 25px;
+  max-width: 1400px;
+  margin: 0 auto; 
+  width: 100%;
+  @include  desktop-sm() {
+    padding: 0 15px;
+  }
+}
+.container-mini {
+  padding: 0 25px;
+  max-width: 1270px;
+  margin: 0 auto; 
+  width: 100%;
+  @include  desktop-sm() {
+    padding: 0 15px;
+  }
+}
+
+.section{
+  padding:60px 0;
+  @include  tab-sm() {
+    padding:100px 0;
+  }
+  p{
+    font-size: 14px;
+    line-height:34px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color:var(--textgray);
+    @include  tab-sm() {
+      font-size: 16px;
+      line-height:38px;
+    }
+        
+    &.primary_text{
+      color: var(--primary-color); 
+    }
+  }
+  &.dark{
+    background: var(--black);
+  }
+  &.gray{
+    background: #F4F4F4;
+  }
+}
+
+.flex-wrapper{
+  display:block;
+  @include  tab-sm() {
+    padding: 0 15px;
+    display:flex;
+    gap: 40px;
+    &.g-0{
+      gap: 0;
+    }
+    .w-25-p{
+      width: 25%;
+    }
+    .w-40-p{
+      width: 45%;
+    }
+    .w-50-p{
+      width: 50%;
+    }
+    .w-60-p{
+      width: 55%;
+    }
+  }
+}
+
+.whatwedo_bg{
+  .innerBanner{
+      background: url("../../../assets/images/banners/what_we_do_banner.webp") no-repeat center center;
+  }
+}
+.about_bg{
+  .innerBanner{
+      background: url("../../../assets/images/banners/about_banner.webp") no-repeat center center;
+  }
+}
+.portfolio_bg{
+  .innerBanner{
+      background: url("../../../assets/images/banners/portfolio_banner.webp") no-repeat center center;
+  }
+}
+.testimonial_bg{
+  .innerBanner{
+      background: url("../../../assets/images/banners/testimonial_bg.webp") no-repeat center center;
+  }
+}

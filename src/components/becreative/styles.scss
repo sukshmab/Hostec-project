@@ -1,0 +1,58 @@
+
+@import "../../assets/scss/index.scss";
+
+.be_creative{
+    background-size:cover;
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url("../../assets/images/banners/be_creative.png") no-repeat center center;
+        @include transition(all 0.4s ease);
+    }
+    &:hover{
+        &:before {
+            filter: blur(5px);
+            -webkit-filter: blur(5px);  
+        }
+        img{
+            @include  transform(scale(1.1));
+        }
+    }
+}
+.be_creative_title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    display: block;
+    gap: 50px;
+    color: var(--gray);
+    position: relative;
+    z-index: 2;
+    @include  tab-sm() {
+        font-size: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @include  tab-sm-max() {
+        padding-top: 100px;
+    }
+    img{
+        cursor: pointer;
+        @include  transform(scale(1));
+        @include transition(all 0.4s ease);
+        @include  tab-sm-max() {
+            position: absolute;
+            left: calc(50% - 40px);
+            top: 0;
+            width: 80px;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+@import "../../assets/scss/index.scss";
+
+.footer{
+    padding:25px 0;
+    border-top:3px solid #F4F4F4;
+}
+.footerLogo{
+    margin-bottom: 20px;
+    @include tab-sm-max() {
+        text-align:center;
+    }
+}
+.socialLinks{
+    display:flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    @include tab-sm-max() {
+        justify-content: center;
+    }
+    a{
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--primary-color);
+        @include border-radius(32px); 
+        @include transition(all 0.3s ease);
+        &:hover{
+            filter: saturate(2);
+        }
+    }
+}
+.links{
+    margin-top: 40px;
+    @include tab-sm-max() {
+        display:none;
+    }
+    h3{
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--darkgray);
+        margin-bottom: 15px;
+    }
+    a{
+        font-size: 14px;
+        line-height:34px;
+        display: block;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: 500;
+        color: var(--lightgray);
+        text-decoration: none;
+        @include transition(all 0.3s ease);
+        &:hover{
+            color: var(--gray);
+        }
+    }
+    p{
+        font-size: 14px;
+        line-height:34px;
+        display: block;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--lightgray);
+        text-decoration: none;
+    }
+}
+.copyright{
+    border-top: 3px solid #F4F4F4;
+    margin-top:25px;
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    font-size: 14px; 
+    justify-content:space-between;
+    @include tab-sm-max() {
+        display:block;
+        text-align:center;
+        p{
+            display: block;
+            padding-top:15px; 
+        }
+    }
+    p{
+        margin: 0;
+        font-size: 14px;
+        color: #868686;
+    }
+    a{
+        color: #868686;
+        text-decoration: none;
+        font-weight: 500;
+        @include transition(all 0.3s ease);
+        &:hover{
+            color: var(--gray);
+        }
+    }
+}
+
+.scrollTop{
+    width: 45px;
+        height: 45px;
+        position: fixed;
+        z-index: 5;
+        right: 35px;
+        bottom: 35px;
+        display: block;
+        border: none;
+        cursor: pointer;
+        text-indent: -9999px;
+        background: url("../../assets/images/up_arrow.svg") no-repeat center center;
+        background-size:100%;
+        @include transition(all 0.3s ease);
+        @include  desktop-sm() {
+            right: 75px;
+            bottom: 75px;
+        }
+        &:hover{
+            background: rgba(255, 255, 255, 0.1) url("../../assets/images/up_arrow.svg") no-repeat center center;
+            background-size:100%;
+        }
+}

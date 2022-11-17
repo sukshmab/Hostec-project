@@ -1,0 +1,150 @@
+
+@import "../../assets/scss/index.scss";
+
+.banner{
+    display: block;
+    width: 100%;
+    height:650px;
+    position: relative;
+    @include  desktop-sm() {
+        min-height:700px; 
+        height:100vh;
+    }
+    .sliderItem{
+        position: relative;
+        &:after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            z-index: 1;
+            background:rgba(000, 000, 000, 0.5);
+        }
+    }
+    .slidertextWrap{
+        position: absolute;
+        display:flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        min-height:500px;
+        height: 500px; 
+        left: 0;
+        top: 0;
+        z-index: 2;
+        padding:0 0 50px 0;
+        @include  desktop-sm() {
+            padding:0 0 150px 150px;
+            min-height:650px;
+            height:100vh;
+        }
+    }
+    .slidertext{
+        h1{
+            font-size: 60px;
+            font-weight: 700;
+            color: var(--white);
+            line-height:65px;
+            text-transform:uppercase;
+            @include  desktop-sm() {
+                font-size: 130px;
+                line-height:100px;
+            }
+            span{
+                display: block;
+                font-size: 25px;
+                font-weight: 300;
+                @include  desktop-sm() {
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+    .buttonWrap{
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+        @include  desktop-sm() {
+            gap: 25px;
+            margin-top: 50px;
+        }
+    }
+    .bannerImage{
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+    }
+    .bannerSocial{
+        padding: 44px 24px;
+        width: 100px;
+        height:100vh;
+        min-height:650px;
+        position: absolute;
+        left:0;
+        top: 0;
+        display:none;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+        z-index: 2;
+        background:rgba(000, 000, 000, 0.60);
+        @include  desktop-sm() {
+            display:flex;
+        }
+        a{
+            filter: brightness(1);
+            @include transition(all 0.3s ease);
+            &:hover{
+                filter:  brightness(1.75);
+            }
+        }
+        &:before{
+            width:1px;
+            height:25vh;
+            min-height: 155px;
+            content: "";
+            position: absolute;
+            display: block;
+            left: 50%;
+            top: 44px;
+            background:rgba(255, 255, 255, 0.30);
+        }
+        &:after{
+            width:1px;
+            height:25vh;
+            min-height: 155px;
+            content: "";
+            position: absolute;
+            display: block;
+            left: 50%;
+            bottom: 44px;
+            background:rgba(255, 255, 255, 0.30);
+        }
+    }
+    .downArrow{
+        width: 60px;
+        height: 60px;
+        background:url("../../assets/images/down_arrow.svg") no-repeat center center;
+        background-size: cover;
+        position: absolute;
+        left: 50%;
+        bottom:0;
+        margin-left:-30px;
+        z-index: 10;
+        text-indent: -9999px;
+        cursor: pointer;
+        -moz-animation: bounce 3s infinite;
+        -webkit-animation: bounce 3s infinite;
+        animation: bounce 3s infinite;
+    }
+}
+
+.scrollIntoView{
+    text-indent: -9999px;
+    height:0;
+}

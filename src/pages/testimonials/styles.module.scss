@@ -1,0 +1,40 @@
+@import "../../assets/scss/index.scss";
+
+section .serviceText{
+    text-align: center;
+    margin-bottom:0;
+    @include  desktop-sm() {
+        margin:0 150px 0;
+    }
+    p{
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 37px;
+        color: var(--textgray);
+        @include  desktop-sm() {
+            font-size: 29px;
+            line-height: 47px; 
+        }
+    }
+}
+.testimonialBg{
+    background: url("../../assets/images/banners/testimonialBg.webp") no-repeat center center;
+    background-attachment: fixed;
+    background-size:cover;
+}
+.contact{
+    max-width: 1000px;
+    margin: 0 auto;
+    .formDual{
+        @include  desktop-sm() {
+            display: flex;
+            gap: 140px;
+        }
+    }
+    .formSubmitWrap{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        margin-top:60px;
+    }
+}
